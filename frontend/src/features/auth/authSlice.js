@@ -76,6 +76,7 @@ export const authSlice = createSlice({
             state.loading = true
         })
         .addCase(login.fulfilled, (state, action) => {
+            console.log(action.payload)
             state.loading = false
             state.user = action.payload
             addLocalStorageUser(action.payload)

@@ -69,7 +69,7 @@ const userLogin = async (req, res) => {
         })
         
     } catch (e) {
-         res.status(500).send("User error")
+         res.status(500).send(`User error ${e} ${process.env.JWT_KEY}`)
     }
 }
 
